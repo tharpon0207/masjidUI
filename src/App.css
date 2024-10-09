@@ -1,0 +1,983 @@
+body {
+  height: 100%;
+  overflow-x: hidden; 
+}
+
+.welcometext {
+  color:black;
+  font-family: timesnewroman;
+  font-size: 40px;
+  text-align: center;
+  border-bottom-style: ridge;
+  border-bottom-color: gold;
+  border-bottom-width: 2px;
+
+}
+
+body {
+  background-color: white;
+  height: 1000px;
+}
+
+.quote{
+  color:rgb(187, 140, 10);
+  font-family: timesnewroman;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: .1%;
+}
+
+.quotecite{
+  color:rgb(187, 140, 10);
+  font-family: timesnewroman;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0%;
+}
+
+fieldset{
+  background-image: url('./images/formbg.jpg');
+  border-color: black;
+  height: 900px;
+  width: 92rem;
+  overflow-y: scroll;
+  scrollbar-color: gold;
+  border-width: 4px;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.introContainer{
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  overflow-x: hidden;
+}
+
+.formLabel{
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dropdownLabel{
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.signupInput{
+  height: 2.5rem;
+  width: 48rem;
+  border-color: goldenrod;
+  border-width: 5px;
+  text-align: center;
+  font-size: 2rem;
+  padding: .5rem;
+  margin-bottom: 4rem;
+  background-color: white;
+}
+
+.signupInput:hover{
+  border-color: black;
+}
+
+.signupInput:focus, .addressline:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px gold;
+  border-color: black;
+  border-style: solid;
+}
+
+.multi:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px gold;
+  border-color: black;
+  border-style: solid;
+}
+
+.thirdmulti:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(0, 204, 255);
+  border-color: black;
+  border-style: solid;
+}
+
+.HJMimage{
+  background-image: url("./images/HJMpattern.webp");
+  background-color: black;
+  width: 100%;
+  background-position: center;
+  height: 100px;
+  border-bottom: solid 4px gold;
+}
+
+.submitButton{
+  border: solid 4px gold;
+  height: 5rem;
+  width: 13rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  background-color: white;
+}
+
+.submitButton:hover{
+  background-color: gold;
+  color: white;
+  border-color: gold;
+}
+
+.nextButton{
+  background-color: white;
+  color: black;
+  border-color: gold;
+  height: 2.5rem;
+  width: 7rem;
+  font-size: 15px;
+  margin-right:1rem;
+  float: right;
+  margin-top: 5rem;
+  position: relative;
+  margin-bottom: 1rem;
+
+}
+
+.nextButton:hover{
+  background-color: gold;
+  color: white;
+}
+
+.nextButton:disabled{
+  background-color: rgb(211, 211, 211);
+  color: rgb(97, 97, 97);
+  border-color: rgb(97, 97, 97);
+}
+
+
+.formPageTitle{
+  font-size: 30px;
+  margin-bottom: 2%;
+  font-weight: bold;
+  text-align: center;
+  width: fit-content;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(to right, gold, goldenrod) 1;
+  display: inline-block;
+}
+
+.formPageTitleContainer{
+  text-align: center;
+}
+
+.multi{
+  height: 2rem;
+  width: 20rem;
+  border-color: goldenrod;
+  border-width: 5px;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: .05rem;
+  background-color: white;
+  position: absolute;
+  display: block;
+  margin-top: .5rem;
+  block-size: border-box;
+}
+
+
+.thirdmulti:hover{
+  border-color: black;
+}
+
+.multi:hover{
+  border-color: black;
+}
+
+.dropdown{
+  height: 40px;
+  width: 20%;
+  text-align: center;
+  font-size: 150%;
+  margin-bottom: 4%;
+  border-color: gold;
+  border-width: 2px;
+  border-style: inset;
+  outline: none;
+  position: relative;
+}
+
+select {
+  height: 40px;
+  width: 20%;
+  text-align: center;
+  font-size: 150%;
+  margin-bottom: 4%;
+  border-color: gold;
+  border-width: 2px;
+  border-style: inset;
+  outline: none;
+  position: relative;
+}
+
+.dropdown:active{
+  border-style: outset;
+}
+
+.dropdown:focus{
+  border-style: outset;
+}
+
+.dropdown:hover{
+  background-color: rgb(250, 250, 250);
+}
+
+::-webkit-scrollbar{
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: whitesmoke;
+  box-shadow: inset 0 0 5px lemonchiffon;
+}
+
+::-webkit-scrollbar-thumb {
+  background: goldenrod;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darkgoldenrod;
+}
+
+.addressline{
+  height: 23px;
+  width: 50%;
+  border-color: goldenrod;
+  border-width: 5px;
+  text-align: center;
+  font-size: 30px;
+  padding: 1%;
+  margin-bottom: 4%;
+  background-color: white;
+}
+
+.addressline:hover{
+  border-color: black;
+}
+
+.minilabel{
+  font-weight: bold;
+  font-size: 110%;
+  display: block;
+  width: 300%;
+  text-align: left;
+}
+
+.miniinputContainer{
+  position: relative;
+  margin-left: 23.5%;
+  float: left;
+  width: 7%;
+}
+
+.thirdmultiContainer{
+  position: relative;
+  margin-left: 39%;
+  width: 7%;
+  background-color: transparent;
+  margin-top: 7%;
+}
+
+.submitButton:disabled:hover{
+  background-color: lightgrey;
+  border-color: darkgray;
+}
+
+.titleContainer {
+  text-align: center;
+}
+
+.thankyou {
+  margin-top: 5%;
+  font-size: 600%;
+  font-weight: bolder;
+  background: linear-gradient(to right, purple, goldenrod);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 5px solid;
+  color: transparent;
+  border-image: linear-gradient(to right, purple, goldenrod) 1;
+  width: fit-content; /* Adjusts the width to fit the content */
+  margin: 0 auto; /* Centers the element horizontally */
+}
+
+.contacttext{
+  font-size: 200%;
+  font-weight: bold;
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+
+.declarationtext{
+  font-size: 120%;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  width: 80%;
+}
+
+.declarationcheckbox{
+  size: 100%;
+  margin-bottom: 4%;
+  height: 35px;
+  width: 40px;
+  margin: 0 auto;
+}
+
+.agreeLabel{
+  font-size: 120%;
+  margin-bottom: 50px;
+  display: inline-flex;
+  font-size: 25px;
+  margin-left: 0%;
+}
+
+.checkboxContainer{
+  margin: 0 auto;
+  margin-left: 10%;
+  width: 15%;
+  position: relative;
+  display: inline-flex;
+  text-align: center;
+}
+
+.declarationdiv{
+  text-align: center;
+  border: 3px dashed black;
+  height: 180px;
+  margin: 0 auto;
+  width: 60%;
+  margin-bottom: 5%;
+  margin-top: 7%;
+}
+
+.contactContainer{
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  height: 80px;
+  position: auto;
+  margin-bottom: 3%;
+  border-left: 5px solid goldenrod;
+}
+
+.contactImg{
+  float: left;
+  height: 100%;
+  width: 8%;
+  margin-left: 3%;
+}
+
+.contactLabel{
+  float: left;
+  font-size: 200%;
+  font-weight: bold;
+  margin-left: 5%;
+  position: relative;
+  padding: 2%;
+  text-decoration: none;
+  color: black;
+  -webkit-transition: color .5s;
+  -moz-transition:    color .5s;
+  -ms-transition:     color .5s;
+  -o-transition:      color .5s;
+  transition:         color .5s;
+}
+
+.contactLabel:hover{
+  color: goldenrod;
+}
+
+.warningContainer{
+  margin: 0 auto;
+  width: 30%;
+  height: 30px;
+  text-align: center;
+}
+
+.warningText{
+  color: red;
+  font-size: 110%;
+}
+
+.bottom{
+  position: absolute;
+  display: block;
+  height: 20%;
+  width: 100%;
+  background-image: url("./images/HJMpattern.webp");
+  background-color: black;
+  margin-bottom: 0;
+
+  margin-top: 10%;
+  border-top: 4px solid gold;
+}
+
+.closingText{
+  color: lightgray;
+  margin-top: 2%;
+  font-size: 100%;
+  -webkit-transition: color .5s;
+  -moz-transition:    color .5s;
+  -ms-transition:     color .5s;
+  -o-transition:      color .5s;
+  transition:         color .5s;
+  text-decoration: none;
+}
+
+.closingText:hover{
+  color: darkgoldenrod;
+}
+
+.navBar {
+  position: sticky; 
+  top: 0;
+  background-image: url('./images/HJMpattern.webp');
+  height: 6rem;
+  width: 100%;
+  align-items: center;
+  justify-content: right;
+  display: flex;
+  border-bottom: 5px solid goldenrod;
+}
+
+.navbarButton {
+  width: 7em;
+  height: 100%;
+  background-image: url('./images/HJMpattern.webp');
+  font-size: 1.5em;
+  border: none;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarButton:hover {
+  color: gold;
+  background: linear-gradient( rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.103) ), url('./images/HJMpattern.webp');
+}
+
+.navbarImgContainer{
+  width: 10%;
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  margin-right: 89%;
+}
+
+.TopDiv{
+  height: fit-content;
+  text-align: center;
+  background-image: url('./images/HJMpattern.webp');
+  border-bottom: 2px solid goldenrod;
+  margin: 0 auto;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.homePageWelcomeText{
+  text-align: center;
+  color: whitesmoke;
+  font-size: 2.5rem;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: .6rem;
+}
+
+.homePageSub{
+  color: white;
+}
+
+.aboutUsContainer{
+  width: 100%;
+  height: 35rem;
+  border-top: .5rem solid goldenrod;
+  border-bottom: .5rem solid goldenrod;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: aliceblue;
+  align-items: center;
+}
+
+.aboutUsTitle{
+  margin-left: 3rem;
+  width: fit-content;
+  border-bottom: .2rem solid goldenrod;
+}
+
+.aboutUsDesc{
+  margin-left: 2rem;
+  width: 45rem;
+  font-size: 1.3rem;
+  border-left: .2rem dotted goldenrod;
+  padding: 1rem;
+  height: fit-content;
+}
+
+.aboutUsPics{
+  height: 26rem;
+  width: 55rem;
+  border: 5px solid darkgoldenrod;
+  border-radius: 1rem;
+  margin-right: 4rem;
+  animation: changeImg 20s infinite steps(1);
+  background-size: 100% 100%;
+  animation-fill-mode: forwards; /* Keeps the last image at the end of the animation */
+}
+
+.aboutUsPics::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  background-image: url('./images/HJMfront.jpeg'), url('./images/eidinside.jpg'), url('./images/eidoutside.jpg'); /* Preload images */
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: gold;
+}
+
+::selection {
+  color: black;
+  background: gold;
+}
+
+@keyframes changeImg {
+  0% {
+    background-image: url('./images/HJMfront.jpeg');
+  }
+  20% {
+    background-image: url('./images/eidinside.jpg');
+  }
+  40% {
+    background-image: url('./images/eidoutside.jpg');
+  }
+  60% {
+    background-image: url('./images/basketball2.jpg');
+  }
+  80% {
+    background-image: url('./images/game.jpg');
+  }
+}
+
+.homePageDiv{
+  height: 280rem;
+  text-align: center;
+}
+
+.ourServicesContainer{
+  width: 100%;
+  height: 50rem;
+  margin-top: 3rem;
+  border-top: .5rem solid orange;
+  border-bottom: .5rem solid orange;
+  float: left;
+  background-image: url("./images/webbg.jpg");
+}
+
+.ourServicesTitle{
+  margin-left: 3rem;
+  width: fit-content;
+  height: fit-content;
+  border-bottom: .2rem solid orange;
+  margin-bottom: 2em;
+}
+
+.serviceContainer{
+  height: 20em;
+  width:100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1em;
+
+}
+
+.services{
+  height: 15em;
+  width: 28em;
+  border: .3em solid orange;
+  background-size: 100% 100%;
+}
+
+.servicesDesc{
+  font-weight: 600;
+  font-size: 1.5em;
+  float: left;
+}
+
+.servicesDescTime{
+  font-weight: 600;
+  color: navy;
+  font-size: 1em;
+}
+
+.eventsContainer{
+  width: 100%;
+  height: 55em;
+  border-top: 1rem solid navy;
+  border-bottom: 1rem solid navy;
+  margin-top: 3rem;
+  background: linear-gradient( rgba(255, 255, 255, 0.212), rgba(255, 255, 255, 0.212) ), url('./images/bluepattern.avif');
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+
+.bannerContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.eventContainer{
+  width: 90%;
+  height: 15rem;
+  border: .5em solid navy;
+  margin-bottom: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  background-color: lightgray;
+  display: flex;
+}
+
+.eventsTitle{
+  margin-left: 3rem;
+  width: fit-content;
+  height: fit-content;
+  border-bottom: .5rem solid Navy;
+  margin-bottom: 1.2rem;
+  font-size: 3rem;
+  color: white;
+  font-weight: 700;
+}
+
+.eventDateTime{
+  height: 100%;
+  width: 20%;
+  border-right: .5rem solid Navy;
+  text-align: center;
+  display: block;
+}
+
+.eventMonth{
+  font-size: 400%;
+  font-weight: bolder;
+  color: Navy;
+  margin-top: 0;
+}
+
+.eventDay{
+  font-size: 300%;
+  font-weight: bolder;
+  color: Navy;
+  margin-top: 0;
+}
+
+.eventTime{
+  font-size: 150%;
+  font-weight: bolder;
+  color: Navy;
+  margin-top: 2rem;
+}
+
+.eventBody{
+  height: 100%;
+  width: 75%;
+  text-align: left;
+  overflow-y: hidden;
+}
+
+.eventHeader{
+  color: navy;
+  font-size: 2em;
+  margin-top: .2em;
+  margin-left: .5em;
+  font-weight: 700;
+  margin-bottom: 0em;
+}
+
+.eventDesc{
+  color: navy;
+  font-size: 120%;
+  margin-left: 1.2%;
+  font-weight: 500;
+}
+
+.eventsMiniContainer{
+  height: 60vh;
+  width: 80%;;
+  border: 1em solid Navy;
+  overflow-y: scroll;
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 2em;
+  background-color: rgba(119, 119, 119, 0.644);
+}
+
+.announcementsDiv{
+  border: 7px solid blueviolet;
+  height: 35rem;
+  width: 80%;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient( rgba(255, 255, 255, 0.685), rgba(255, 255, 255, 0.781) ), url('./images/masjidbackground.jpg');
+  background-size: 100% 100%;
+  overflow-y: scroll;
+}
+
+.announcementDiv{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  overflow-y: scroll;
+}
+
+.announcementsTitle{
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: fit-content;
+  border-bottom: .5rem solid blueviolet;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  color: blueviolet;
+  font-weight: 700;
+}
+
+.announcement{
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid blueviolet;
+  height: 20em;
+  width: 75em;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(245, 245, 245, 0.637);
+  border-radius: 2em;
+  margin-bottom: 1em;
+}
+
+.anTopDiv{
+  border-bottom: 3px solid black;
+  width: 100%;
+  height: 5em;
+  display: flex;
+  background-color: rgba(245, 245, 245, 0.534);
+  justify-content: left;
+  align-items: center;
+  border-top-right-radius: 2em;
+  border-top-left-radius: 2em;
+}
+
+.announcementIconContainer{
+  height: 4em;
+  width: 4em;
+  background-image: url("./images/anicon.png");
+  background-size: 100% 100%;
+  margin-left: 1em;
+  display: block;
+}
+
+.anTitle{
+  margin-left: .5em;
+  color: blueviolet;
+  font-size: 2em;
+  height: 100%;
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+}
+
+.anDate{
+  height: fit-content;
+  width: 15em;
+  font-size: 1.5em;
+  text-align: left;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+.anBody{
+  width: 90%;
+  margin-top: .5em;
+  height: fit-content;
+  margin-left: 1em;
+  text-align: left;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: black;
+}
+
+.prayersDiv{
+  width: 100%;
+  height: 4em;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 1em;
+  overflow-y: hidden;
+}
+
+.prayerTime{
+  height: fit-content;
+  width: 13em;
+  color: white;
+  align-items: center;
+  text-align: center;
+  border-right: 3px solid gold;
+  border-left: 3px solid gold;
+  margin-left: 3em;
+}
+
+.prayerDesc{
+  color: white;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.donationsContainer{
+  width: 100%;
+  height: 40rem;
+  border-top: 1em solid darkgreen;
+  border-bottom: 1em solid darkgreen;
+  margin-top: -6em;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  background: linear-gradient( rgba(0, 0, 0, 0.027), rgba(0, 0, 0, 0.027) ), url('./images/bggreen.jpg');
+  }
+
+  .donationsTitle{
+    height: fit-content;
+    width: fit-content;
+    border-bottom: 5px solid whitesmoke;
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 400%;
+    color: white;
+  }
+
+  .donationQuote{
+    color: white;
+    font-size: 180%;
+    width: 50%;
+    margin-left: 2%;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .dQuoteCiting{
+    color: white;
+    font-size: 140%;
+    width: fit-content;
+    text-align: left;
+    margin-left: 2%;
+    margin-top: 1%;
+    font-weight: 500;
+  }
+
+  .donateButton{
+    width: 15%;
+    height: 7em;
+    border: 5px solid gold;
+    margin-top: 5%;
+    margin-left: 2%;
+    background-color: lightgoldenrodyellow;
+    font-size: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-transition: background-color .3s;
+  -moz-transition:    background-color .3s;
+  -ms-transition:     background-color .3s;
+  -o-transition:      background-color .3s;
+  transition:         background-color .3s;
+  text-decoration: none;
+  color: black;
+  padding: .5%;
+  }
+
+.buttonText{
+  width: fit-content;
+  margin: auto;
+  font-size: 200%;
+  font-weight: 700;
+}
+
+.donateButton:hover{
+  background-color: gold;
+  color: black;
+}
+
+.donateButtonDivs{
+  width: 100%;
+  display: flex;
+  height: 20em;
+  flex-direction: row;
+}
+
+.ORdiv{
+    width: 5%;
+    height: 7em;
+    margin-top: 5%;
+    margin-left: 2%;
+    font-size: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.OR{
+  width: fit-content;
+  margin: auto;
+  font-size: 300%;
+  font-weight: 600;
+  color: lightgoldenrodyellow;
+}
+
+
+.contactDiv{
+  width: 100%;
+  height: fit-content;
+  border-top: .5em solid black;
+  border-bottom: .5em solid black;
+  margin-top: 3%;
+  background-color: rgba(211, 211, 211, 0.164);
+}
+
+.copyrightContainer{
+  width: 30%;
+  height: 3em;
+  margin-bottom: -.5%;
+  font-weight: 500;
+}
+
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
