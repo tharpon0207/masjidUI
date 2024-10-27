@@ -1,5 +1,4 @@
 import "../App.css";
-import { useState } from 'react';
 import MiniInput from "./formComponents/MiniInput.js";
 import SignupInput from "./formComponents/SignupInput.js";
 import Dropdown from "./formComponents/Dropdown.js";
@@ -10,7 +9,10 @@ import ContactBlock from "./formComponents/ContactBlock.js";
 import Pin from '../images/mapPin.webp';
 import Email from '../images/email.png';
 import Phone from '../images/phone.png';
+
+import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import { api_host, axiosConfig } from "../config/data";
 
 export default function Form() {
     let mapLink = 'https://www.google.com/maps/place/Hatfield+Jame+Masjid/@40.272614,-75.2894718,17z/data=!4m5!3m4!1s0x89c6a1a0d492c06d:0x60a34f41cf940c5e!8m2!3d40.2725839!4d-75.2873132?shorturl=1';
@@ -48,31 +50,29 @@ export default function Form() {
         status: 1
     });
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        setPage(2);
-        formData.gender = (formData.gender === "Male") ? "M" : "F";
-        formData.share_info = (formData.share_info === "Share") ? 1 : 0;
-        formData.auto_withdrawal = (formData.auto_withdrawal === "yes") ? 1 : 0;
-        formData.subscription = parseInt(formData.subscription)
-        console.log(JSON.stringify(formData));
-        
-          let axiosConfig = {
-                headers: {
-                    'Content-Type': 'application/json;charset=UTF-8',
-                    "Access-Control-Allow-Origin": "*",
-                }
-              };
-              
-              Axios.post('http://127.0.0.1:10010/member', JSON.stringify(formData), axiosConfig)
-              .then((res) => {
-                console.log("RESPONSE RECEIVED: ", res);
-              })
-              .catch((err) => {
-                console.log("AXIOS ERROR: ", err);
-              })
 
-    }
+        // Creating a new object instead of mutating the state directly
+        const updatedFormData = {
+            ...formData,
+            gender: formData.gender === "Male" ? "M" : "F",
+            share_info: formData.share_info === "Share" ? 1 : 0,
+            auto_withdrawal: formData.auto_withdrawal === "yes" ? 1 : 0,
+            subscription: parseInt(formData.subscription)
+        };
+
+        try {
+            const jsonData = JSON.stringify(updatedFormData);
+            const response = await Axios.post(`${api_host}/member`, jsonData, axiosConfig);
+            console.log("RS DATA :", response.data);
+            // Handle any state update based on the response if needed
+        } catch (error) {
+            console.error('Error:', error);
+        }
+
+        setPage(2); // Assuming setPage is correctly defined
+    };
 
 
     const [checked, setChecked] = useState(false);

@@ -6,12 +6,31 @@ import Intro from '../components/Intro';
 import OurServices from '../components/OurServices';
 import Events from '../components/Events';
 import Announcements from '../components/Announcements';
-import { announcementList } from '../components/exportLists/announcementList';
 import Donations from '../components/Donations';
 import Contact from '../components/Contact';
 import {Link as ScrollLink} from 'react-scroll';
 
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
+import { api_host, axiosConfig } from "../config/data";
+
 export default function HomePage(){ 
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        // Using an async function within useEffect
+        const fetchData = async () => {
+            try {
+                const response = await Axios.get(`${api_host}/announcement?limit=5`, axiosConfig);
+                setData(response.data);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return(
         <div className='homePageDiv'>
             <div id='Top'>
@@ -31,7 +50,7 @@ export default function HomePage(){
             </div>
                 <div className='bannerContainer'> 
                     <div>
-                        { announcementList.length > 0 &&
+                        { data && data.announcements.length > 0 &&
                         <div>
                         <Announcements/>
                         </div>

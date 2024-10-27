@@ -7,13 +7,10 @@ export default function Prayers() {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        console.log("RS api_host :" + api_host);
-
         // Using an async function within useEffect
         const fetchData = async () => {
             try {
                 const response = await Axios.get(`${api_host}/prayertimes`, axiosConfig);
-                console.log("RS DATA :" + response.data);
                 setData(response.data);
             } catch (error) {
                 console.error('Error:', error);
