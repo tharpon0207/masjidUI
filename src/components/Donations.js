@@ -13,9 +13,11 @@ export default function Donations(){
                 -2:110 Quran
             </p>
             <div className='donateButtonDivs'>
-                <a className='donateButton' href='https://www.paypal.com/donate?token=X4DwKQfj_99awxekjg3zBus6Ssu6VADp0kM53rD_8Tt5aar4RF4J3jUpFwAfcHFJ3hLuWdFBglbc4Dq8' rel='noreferrer' target='_blank'>
-                    <p className='buttonText'>DONATE VIA PAYPAL</p>
-                </a>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target='_blank' className='donateButton'>
+				<input type="hidden" name="cmd" value="_s-xclick" />
+				<input type="hidden" name="hosted_button_id" value="FEVB3ULGNHTNA" />
+			    <button className='PAYPAL'>DONATE VIA PAYPAL</button>
+			</form>
                 <div className='ORdiv'>
                 <p className='OR'>
                     OR

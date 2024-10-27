@@ -25,7 +25,7 @@ export default function Prayers() {
     }
 
     const prayers = data.time.map(p =>
-        <div key={p.prayer}>
+        <div key={p.prayer} style={{ borderRight: p.prayer === "Jummah2" ? '3px solid gold' : 'none'}}>
             <Prayer Name={p.prayer} Time={p.time} />
         </div>
     );

@@ -309,8 +309,8 @@ select {
   border-bottom: 5px solid;
   color: transparent;
   border-image: linear-gradient(to right, purple, goldenrod) 1;
-  width: fit-content; /* Adjusts the width to fit the content */
-  margin: 0 auto; /* Centers the element horizontally */
+  width: fit-content;
+  margin: 0 auto; 
 }
 
 .contacttext{
@@ -451,6 +451,7 @@ select {
   justify-content: right;
   display: flex;
   border-bottom: 5px solid goldenrod;
+  z-index: 1000; 
 }
 
 .navbarButton {
@@ -539,7 +540,7 @@ select {
   margin-right: 4rem;
   animation: changeImg 20s infinite steps(1);
   background-size: 100% 100%;
-  animation-fill-mode: forwards; /* Keeps the last image at the end of the animation */
+  animation-fill-mode: forwards; 
 }
 
 .aboutUsPics::before {
@@ -551,7 +552,7 @@ select {
   background-image: url('./images/HJMfront.jpeg'), url('./images/eidinside.jpg'), url('./images/eidoutside.jpg'); /* Preload images */
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection { 
   color: black;
   background: gold;
 }
@@ -580,14 +581,16 @@ select {
 }
 
 .homePageDiv{
-  height: 280rem;
+  height: fit-content;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .ourServicesContainer{
   width: 100%;
   height: 50rem;
-  margin-top: 3rem;
+  margin-top: 3em;
   border-top: .5rem solid orange;
   border-bottom: .5rem solid orange;
   float: left;
@@ -639,12 +642,13 @@ select {
   background: linear-gradient( rgba(255, 255, 255, 0.212), rgba(255, 255, 255, 0.212) ), url('./images/bluepattern.avif');
   display: flex;
   flex-direction: column;
-  margin-bottom: 10rem;
 }
 
 .bannerContainer{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .eventContainer{
@@ -844,27 +848,30 @@ select {
 
 .prayerTime{
   height: fit-content;
+  display: flex;
   width: 13em;
   color: white;
   align-items: center;
   text-align: center;
-  border-right: 3px solid gold;
   border-left: 3px solid gold;
-  margin-left: 3em;
+  margin-left: .1em;
+  flex-direction: row;
 }
 
 .prayerDesc{
   color: white;
   font-size: 1.3em;
   font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .donationsContainer{
   width: 100%;
   height: 40rem;
+  margin-top: 3em;
   border-top: 1em solid darkgreen;
   border-bottom: 1em solid darkgreen;
-  margin-top: -6em;
   display: flex;
   justify-content: left;
   flex-direction: column;
@@ -902,6 +909,7 @@ select {
   }
 
   .donateButton{
+    position: relative;
     width: 15%;
     height: 7em;
     border: 5px solid gold;
@@ -967,6 +975,8 @@ select {
   border-top: .5em solid black;
   border-bottom: .5em solid black;
   margin-top: 3%;
+  margin-bottom: 0;
+  padding-bottom: 0;
   background-color: rgba(211, 211, 211, 0.164);
 }
 
@@ -980,4 +990,17 @@ select {
 table, th, td {
   border: 2px solid black;
   border-collapse: collapse;
+}
+
+.PAYPAL{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 200%;
+  font-weight: 700;
+  margin: 0 auto;
 }
