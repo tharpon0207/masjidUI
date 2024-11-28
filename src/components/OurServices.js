@@ -11,13 +11,13 @@ export default function OurServices(){
         <div>
             <div className="ourServicesContainer" >
                 <h1 className="ourServicesTitle">Our Services</h1>
-                <div>
-                    <div className="serviceContainer" >
+                <div className="containerOfTwo">
+                    <div className="serviceContainer">
                         <Service Img={quranclass} Start={"10:30 am"} End={"1:00 pm"} Desc={"Quran Class"}/>
                         <Service Img={counceling} Start={"2:00 pm"} End={"7:00 pm"} Desc={"Counceling"}/>
                         <Service Img={nikah} Start={"2:00 pm"} End={"7:00 pm"} Desc={"Nikah Services"}/>
                     </div>
-                    <div className="serviceContainer" >
+                    <div className="serviceContainer">
                         <Service Img={hadithschool} Start={"7:45 pm"} End={"8:15 pm"} Desc={"Hadith School"}/>
                         <Service Img={funeral} Start={"9:00 am"} End={"1:00 pm"} Desc={"Funeral Services"}/>
                         <Service Img={academy} Start={"8:00 am"} End={"3:00 pm"} Desc={"Our Academies"}/>

@@ -10,7 +10,7 @@ import Pin from '../images/mapPin.webp';
 import Email from '../images/email.png';
 import Phone from '../images/phone.png';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Axios from 'axios';
 import { api_host, axiosConfig } from "../config/data";
 

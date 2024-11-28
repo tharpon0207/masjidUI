@@ -1,18 +1,15 @@
 import '../App.css';
 import AboutUs from '../components/AboutUs';
-import { Link } from 'react-router-dom';
-import HJM from '../images/logo3.png';
 import Intro from '../components/Intro';
 import OurServices from '../components/OurServices';
 import Events from '../components/Events';
 import Announcements from '../components/Announcements';
 import Donations from '../components/Donations';
 import Contact from '../components/Contact';
-import { Link as ScrollLink } from 'react-scroll';
-
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import { api_host, axiosConfig } from "../config/data";
+import NavBar from '../components/NavBar';
 
 export default function HomePage(){ 
     const [data, setData] = useState(null);
@@ -51,18 +48,9 @@ export default function HomePage(){
             <div id='Top'>
                 <Intro/>
             </div>
-            <div className="navBar">
-                <div style={{float: 'left'}} className='navbarImgContainer'>
-                    <img src={HJM} alt='HJM' style={{float: 'left'}}/>
-                </div>
-                <ScrollLink to='Top' spy={true} smooth={true} offset={0} duration={600} className='navbarButton'>Home</ScrollLink>
-                <ScrollLink to='Events' spy={true} smooth={true} offset={0} duration={500} className='navbarButton'>Events</ScrollLink>
-                <ScrollLink to='Donations' spy={true} smooth={true} offset={-210} duration={500} className='navbarButton'>Donate</ScrollLink>
-                <Link to="/memberform" className='navbarButton'>Membership</Link>
-                <Link to="/studentform" className='navbarButton'>Student</Link>
-                <ScrollLink to='Contact' spy={true} smooth={true} offset={0} duration={800} className='navbarButton'>Contact Us</ScrollLink>
-                <a href='https://www.hatfieldjamemasjid.org/' target="_blank" rel="noreferrer" className='navbarButton'>Old Site</a>
-            </div>
+
+            <NavBar />
+            
             <div className='bannerContainer'> 
                 <div>
                     { data && data.announcements.length > 0 &&

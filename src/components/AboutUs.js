@@ -2,7 +2,7 @@ export default function AboutUs(){
     return(
     <div>
         <div className="aboutUsContainer">
-            <div>
+            <div className="aboutUsText">
                 <h1 className="aboutUsTitle">About Us</h1>
                 <p className="aboutUsDesc">
                     The Hatfield Jame Masjid (Mosque) is a <span style={{color: "darkgoldenrod"}}> tax-exempt 501 (C) (3) </span> religious organization, located in 
@@ -16,9 +16,7 @@ export default function AboutUs(){
                     visit us at your convenience.
                 </p>
             </div>
-            <div>
-                <div className="aboutUsPics"/>
-            </div>
+            <div className="aboutUsPics"/>
         </div>
     </div>
     )

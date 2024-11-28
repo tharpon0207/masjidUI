@@ -1,19 +1,11 @@
 import '../../App.css';
 import bismillah from '../../images/bismillah.png';
-import { Link } from 'react-router-dom';
-import HJM from '../../images/logo3.png';
+import NavBar from '../../components/NavBar';
 
 export default function Welcome(){
    return(
     <div>
-        <div className = {"navBar"}>
-                <div style={{float: 'left'}} className='navbarImgContainer'>
-                    <img src={HJM} alt='HJM' style={{float: 'left'}}/>
-                </div>
-                <Link to="/" className='navbarButton'>Home</Link>
-                <Link to="/memberform" className='navbarButton'>Membership</Link>
-                <a href='https://www.hatfieldjamemasjid.org/' target="_blank" rel="noreferrer" className='navbarButton'>Old Site</a>
-            </div>
+        <NavBar />
         <div className='welcometext'>
             
             <div className='introContainer'>

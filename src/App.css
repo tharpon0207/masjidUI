@@ -62,14 +62,21 @@ fieldset{
 }
 
 .dropdownLabel{
-  font-size: 1.7rem;
+  font-size: clamp(1vh, 2.5vh, 2rem);
   text-align: center;
   font-weight: bold;
 }
 
+.inputDiv{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: fit-content;
+}
+
 .signupInput{
   height: 2.5rem;
-  width: 48rem;
+  width: 50%;
   border-color: goldenrod;
   border-width: 5px;
   text-align: center;
@@ -77,6 +84,8 @@ fieldset{
   padding: .5rem;
   margin-bottom: 4rem;
   background-color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .signupInput:hover{
@@ -97,15 +106,9 @@ fieldset{
   border-style: solid;
 }
 
-.thirdmulti:focus{
-  outline: none;
-  box-shadow: 0 0 0 2px rgb(0, 204, 255);
-  border-color: black;
-  border-style: solid;
-}
 
 .HJMimage{
-  background-image: url("./images/HJMpattern.webp");
+  background-image: url("./images/HJMpattern.jpg");
   background-color: black;
   width: 100%;
   background-position: center;
@@ -170,29 +173,6 @@ fieldset{
   text-align: center;
 }
 
-.multi{
-  height: 2rem;
-  width: 20rem;
-  border-color: goldenrod;
-  border-width: 5px;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: .05rem;
-  background-color: white;
-  position: absolute;
-  display: block;
-  margin-top: .5rem;
-  block-size: border-box;
-}
-
-
-.thirdmulti:hover{
-  border-color: black;
-}
-
-.multi:hover{
-  border-color: black;
-}
 
 .dropdown{
   height: 40px;
@@ -266,27 +246,99 @@ select {
   border-color: black;
 }
 
-.minilabel{
-  font-weight: bold;
-  font-size: 110%;
-  display: block;
-  width: 300%;
-  text-align: left;
+.doubleContainer{
+  margin-left: auto;
+  margin-right: auto;
+  width:55%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0%;
 }
 
-.miniinputContainer{
-  position: relative;
-  margin-left: 23.5%;
+.singleContainer{
+  width: 40%;
   float: left;
-  width: 7%;
+  display: block;
 }
 
-.thirdmultiContainer{
+.miniLabel{
+  font-size: 130%;
+  font-weight: bold;
+  float: left;
+  margin-bottom: 0.3em;
+}
+
+.miniInput{
   position: relative;
-  margin-left: 39%;
-  width: 7%;
-  background-color: transparent;
-  margin-top: 7%;
+  height: 1rem;
+  width: fit-content;
+  border-color: goldenrod;
+  border-width: 3px;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: .5rem;
+  background-color: white;
+  margin-left: auto;
+  float: left;
+}
+
+
+@media (max-width: 1000px) {
+  .doubleContainer {
+    flex-direction: column; 
+    align-items: center;  
+  }
+
+  .singleContainer {
+    width: 90%; 
+    margin-bottom: 1rem; 
+  }
+
+  .thirdContainer {
+    margin-bottom: 1rem; 
+  }
+
+  .miniLabel{
+    width: 100%;
+    text-align: center;
+  }
+
+  .miniInput{
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    font-size: 1em;
+  }
+
+  .signupInput{
+    font-size: 1.1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dropdown{
+    font-size: 100%;
+  }
+
+  .addressline{
+    font-size: 1.1rem;
+  }
+  
+}
+
+.thirdContainer{
+  margin: 0 auto;
+  width: 20%;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  height: 5em;
+}
+
+.miniInput:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px gold;
+  border-color: black;
+  border-style: solid;
 }
 
 .submitButton:disabled:hover{
@@ -326,6 +378,7 @@ select {
   text-align: center;
   font-weight: bold;
   width: 80%;
+  height: fit-content;
 }
 
 .declarationcheckbox{
@@ -342,6 +395,7 @@ select {
   display: inline-flex;
   font-size: 25px;
   margin-left: 0%;
+  height: 1rem;
 }
 
 .checkboxContainer{
@@ -351,12 +405,13 @@ select {
   position: relative;
   display: inline-flex;
   text-align: center;
+  height: 1rem;
 }
 
 .declarationdiv{
   text-align: center;
   border: 3px dashed black;
-  height: 180px;
+  height: fit-content;
   margin: 0 auto;
   width: 60%;
   margin-bottom: 5%;
@@ -371,13 +426,17 @@ select {
   position: auto;
   margin-bottom: 3%;
   border-left: 5px solid goldenrod;
+  display: flex;
+  align-items: center;
 }
 
 .contactImg{
   float: left;
-  height: 100%;
-  width: 8%;
+  max-height: 100%;
+  max-width: 8%;
   margin-left: 3%;
+  display: flex;
+  align-items: center;
 }
 
 .contactLabel{
@@ -396,13 +455,22 @@ select {
   transition:         color .5s;
 }
 
+@media (max-width: 1023px){
+  .contactLabel{
+    font-size: 130%;
+  }
+  .contactContainer{
+    width: 100%;
+  }
+}
+
 .contactLabel:hover{
   color: goldenrod;
 }
 
 .warningContainer{
   margin: 0 auto;
-  width: 30%;
+  width: 100%;
   height: 30px;
   text-align: center;
 }
@@ -417,7 +485,7 @@ select {
   display: block;
   height: 20%;
   width: 100%;
-  background-image: url("./images/HJMpattern.webp");
+  background-image: url("./images/HJMpattern.jpg");
   background-color: black;
   margin-bottom: 0;
 
@@ -444,7 +512,7 @@ select {
 .navBar {
   position: sticky; 
   top: 0;
-  background-image: url('./images/HJMpattern.webp');
+  background-image: url('./images/HJMpattern.jpg');
   height: 6rem;
   width: 100%;
   align-items: center;
@@ -455,10 +523,10 @@ select {
 }
 
 .navbarButton {
-  width: 7em;
+  width: clamp(3em, 7em, 10em);
   height: 100%;
-  background-image: url('./images/HJMpattern.webp');
-  font-size: 1.5em;
+  background-image: url('./images/HJMpattern.jpg');
+  font-size: clamp(1em, 150%, 2.5rem);
   border: none;
   color: white;
   text-decoration: none;
@@ -470,7 +538,7 @@ select {
 
 .navbarButton:hover {
   color: gold;
-  background: linear-gradient( rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.103) ), url('./images/HJMpattern.webp');
+  background: linear-gradient( rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.103) ), url('./images/HJMpattern.jpg');
 }
 
 .navbarImgContainer{
@@ -484,7 +552,7 @@ select {
 .TopDiv{
   height: fit-content;
   text-align: center;
-  background-image: url('./images/HJMpattern.webp');
+  background-image: url('./images/HJMpattern.jpg');
   border-bottom: 2px solid goldenrod;
   margin: 0 auto;
   overflow: auto;
@@ -507,40 +575,83 @@ select {
 
 .aboutUsContainer{
   width: 100%;
-  height: 35rem;
+  min-height: 60vh;
   border-top: .5rem solid goldenrod;
   border-bottom: .5rem solid goldenrod;
   margin-top: 3rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   background-color: aliceblue;
   align-items: center;
+}
+
+.aboutUsDesc{
+  margin-left: 2rem;
+  width: 90%;
+  font-size: clamp(1vh, 2.5vh, 2rem);
+  border-left: .2rem dotted goldenrod;
+  padding: 1rem;
+  height: fit-content;
+}
+
+@media (min-width: 1024px) {
+  .aboutUsContainer{
+    justify-content: space-between; /* Applied only on larger screens */
+    flex-direction: row; /* Change to row for screens 1024px and wider */
+  }
+}
+
+@media (max-width: 1023px){
+  .aboutUsTitle{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .aboutUsDesc{
+    padding: none;
+    text-align: center;
+    border-left: none;
+    border-bottom: .2rem dotted goldenrod;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+  }
 }
 
 .aboutUsTitle{
   margin-left: 3rem;
   width: fit-content;
   border-bottom: .2rem solid goldenrod;
+  font-size: clamp(2vh, 3rem, 3rem);
 }
 
-.aboutUsDesc{
-  margin-left: 2rem;
-  width: 45rem;
-  font-size: 1.3rem;
-  border-left: .2rem dotted goldenrod;
-  padding: 1rem;
-  height: fit-content;
-}
 
 .aboutUsPics{
-  height: 26rem;
-  width: 55rem;
+  height: 25rem;
+  width: 45%;
   border: 5px solid darkgoldenrod;
   border-radius: 1rem;
-  margin-right: 4rem;
   animation: changeImg 20s infinite steps(1);
   background-size: 100% 100%;
   animation-fill-mode: forwards; 
+}
+@media (max-width: 1023px) {
+  .aboutUsPics{
+    width: 90%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    height: 20rem;
+  }
+}
+
+.aboutUsText{
+  max-width: 90%;
+}
+
+@media (min-width: 1024px) {
+.aboutUsText{
+  max-width: 50%;
+}
 }
 
 .aboutUsPics::before {
@@ -589,7 +700,7 @@ select {
 
 .ourServicesContainer{
   width: 100%;
-  height: 50rem;
+  height: fit-content;
   margin-top: 3em;
   border-top: .5rem solid orange;
   border-bottom: .5rem solid orange;
@@ -606,24 +717,40 @@ select {
 }
 
 .serviceContainer{
-  height: 20em;
+  height: fit-content;
   width:100%;
   display: flex;
   justify-content: space-evenly;
   margin-top: 1em;
+}
 
+
+@media (max-width: 1023px){
+  .serviceContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  .containerOfTwo{
+    flex-direction: column;
+  }
 }
 
 .services{
   height: 15em;
-  width: 28em;
+  width: 100%;
   border: .3em solid orange;
   background-size: 100% 100%;
 }
 
 .servicesDesc{
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: clamp(1em, 1.5em, 2em);
   float: left;
 }
 
@@ -635,7 +762,7 @@ select {
 
 .eventsContainer{
   width: 100%;
-  height: 55em;
+  height: 90vh;
   border-top: 1rem solid navy;
   border-bottom: 1rem solid navy;
   margin-top: 3rem;
@@ -653,14 +780,14 @@ select {
 
 .eventContainer{
   width: 90%;
-  height: 15rem;
+  min-height: 15rem;
   border: .5em solid navy;
   margin-bottom: 3em;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
   background-color: lightgray;
-  display: flex;
+  float: left;
 }
 
 .eventsTitle{
@@ -675,11 +802,10 @@ select {
 }
 
 .eventDateTime{
-  height: 100%;
-  width: 20%;
+  min-height: 100%;
+  min-width: 15vw;
   border-right: .5rem solid Navy;
   text-align: center;
-  display: block;
 }
 
 .eventMonth{
@@ -708,6 +834,9 @@ select {
   width: 75%;
   text-align: left;
   overflow-y: hidden;
+  display: block;
+  font-size: 1em;
+  overflow-x: hidden;
 }
 
 .eventHeader{
@@ -717,6 +846,7 @@ select {
   margin-left: .5em;
   font-weight: 700;
   margin-bottom: 0em;
+  overflow-x: hidden;
 }
 
 .eventDesc{
@@ -724,23 +854,62 @@ select {
   font-size: 120%;
   margin-left: 1.2%;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 .eventsMiniContainer{
   height: 60vh;
-  width: 80%;;
+  width: 80%;
   border: 1em solid Navy;
   overflow-y: scroll;
   margin: 0 auto;
   padding: 2em;
   border-radius: 2em;
   background-color: rgba(119, 119, 119, 0.644);
+  display: flex;
+  flex-direction: column;
+}
+
+.event{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 900px){
+  .event{
+    flex-direction: column;
+  }
+
+  .eventDateTime{
+    width: 100%;
+    border-bottom: .5rem solid navy;
+  }
+
+  .eventBody{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .eventHeader{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 4%;
+  }
+
+  .eventDesc{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
 }
 
 .announcementsDiv{
   border: 7px solid blueviolet;
-  height: 35rem;
-  width: 80%;
+  height: 75vh;
+  width: 90%;
   margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
@@ -772,8 +941,8 @@ select {
   margin-left: auto;
   margin-right: auto;
   border: 5px solid blueviolet;
-  height: 20em;
-  width: 75em;
+  min-height: 30vh;
+  width: 80%;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
@@ -785,7 +954,7 @@ select {
 .anTopDiv{
   border-bottom: 3px solid black;
   width: 100%;
-  height: 5em;
+  min-height: 5em;
   display: flex;
   background-color: rgba(245, 245, 245, 0.534);
   justify-content: left;
@@ -832,10 +1001,11 @@ select {
   font-size: 1.4em;
   font-weight: 500;
   color: black;
+  margin-bottom: 2%;
 }
 
 .prayersDiv{
-  width: 100%;
+  max-width: 100%;
   height: 4em;
   overflow-x: hidden;
   display: flex;
@@ -849,7 +1019,7 @@ select {
 .prayerTime{
   height: fit-content;
   display: flex;
-  width: 13em;
+  width: clamp(8em, 13em, 15em);
   color: white;
   align-items: center;
   text-align: center;
@@ -891,7 +1061,7 @@ select {
   .donationQuote{
     color: white;
     font-size: 180%;
-    width: 50%;
+    width: 90%;
     margin-left: 2%;
     font-weight: 600;
     text-align: left;
@@ -910,7 +1080,7 @@ select {
 
   .donateButton{
     position: relative;
-    width: 15%;
+    width: clamp(10em, 15em, 12em);
     height: 7em;
     border: 5px solid gold;
     margin-top: 5%;
@@ -949,6 +1119,19 @@ select {
   flex-direction: row;
 }
 
+.PAYPAL{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 200%;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
 .ORdiv{
     width: 5%;
     height: 7em;
@@ -971,7 +1154,7 @@ select {
 
 .contactDiv{
   width: 100%;
-  height: fit-content;
+  min-height: 40vh;
   border-top: .5em solid black;
   border-bottom: .5em solid black;
   margin-top: 3%;
@@ -981,7 +1164,7 @@ select {
 }
 
 .copyrightContainer{
-  width: 30%;
+  min-width: 30%;
   height: 3em;
   margin-bottom: -.5%;
   font-weight: 500;
@@ -992,15 +1175,122 @@ table, th, td {
   border-collapse: collapse;
 }
 
-.PAYPAL{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: transparent;
+.menuDiv{
+  height: 100%;
+} 
+
+.menuDropDown{
+  height: fit-content;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid goldenrod;
+  overflow-y: scroll;
+}
+
+.navBarButton-active{
+  background-image: url('./images/HJMpattern.jpg');
+  width: clamp(3em, 7em, 10em);
+  height: 100%;
+  font-size: clamp(1em, 150%, 2.5rem);
   border: none;
-  font-size: 200%;
-  font-weight: 700;
-  margin: 0 auto;
+  color: gold;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient( rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.103) ), url('./images/HJMpattern.jpg');
+}
+
+.navBarButton-active:hover{
+  border: 3px solid goldenrod;
+  background-image: url('./images/HJMpattern.jpg');
+  background: linear-gradient( rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.103) ), url('./images/HJMpattern.jpg');
+}
+
+.menuButton{
+  width: 100%;
+  height: 11vh;
+  font-size: clamp(1em, 150%, 2.5rem);
+  background-image: url('./images/HJMpattern.jpg');
+  color: gold;
+  background-color: navy;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.menuButton:hover{
+  background: linear-gradient( rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.103) ), url('./images/HJMpattern.jpg');
+}
+
+@media (max-width: 1000px){
+  .aboutUsTitle{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .eventsTitle{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ourServicesTitle{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .donationsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .donationsTitle{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .donationQuote{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .donateButtonDivs{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    flex-direction: column;
+  }
+
+  .ORdiv{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-bottom: 3%;
+  }
+
+  .dQuoteCiting{
+    margin-left: 2em;
+  }
+
+  .donateButton{
+    margin-bottom: 3%;
+    margin-top: 3%;
+    height: 7em;
+  }
+
+  .PAYPAL{
+    font-size: clamp(.5em, 1em, 1em);
+  }
+
+  .buttonText{
+    font-size: clamp(.5em, 1em, 1em);
+  }
 }
