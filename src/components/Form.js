@@ -71,7 +71,7 @@ export default function Form() {
             console.error('Error:', error);
         }
 
-        setPage(2); // Assuming setPage is correctly defined
+        setPage(2); 
     };
 
 

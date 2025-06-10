@@ -41,33 +41,36 @@ const NavBar = () => {
                 <a href='https://www.hatfieldjamemasjid.org/' target="_blank" rel="noreferrer" className='navbarButton'>Old Site</a>
                 </>
             :
-            <div className="menuDiv">
-                <button className={selected ? "navBarButton-active" : 'navbarButton'} onClick={select} type="button"> Menu </button>
-                {selected &&
-                <div className="menuDropDown">
-            
-                {location.pathname === '/' ?
-                <>
-                    <ScrollLink to='Top' spy={true} smooth={true} offset={0} duration={600} className='menuButton'>Home</ScrollLink>
-                    <ScrollLink to='Events' spy={true} smooth={true} offset={0} duration={500} className='menuButton'>Events</ScrollLink>
-                    <ScrollLink to='Donations' spy={true} smooth={true} offset={-210} duration={500} className='menuButton'>Donate</ScrollLink>
-                </>
-                :
-                <>
-                <Link to="/" className='menuButton'>Home</Link>
-                </>
-    
-                }
-                <Link to="/memberform" className='menuButton'>Membership</Link>
-                <Link to="/studentform" className='menuButton'>Student</Link>
-                {location.pathname === '/' &&
-                <>
-                    <ScrollLink to='contactDiv' spy={true} smooth={true} offset={0} duration={800} className='menuButton'>Contact Us</ScrollLink>
-                </>
-                }
-                <a href='https://www.hatfieldjamemasjid.org/' target="_blank" rel="noreferrer" className='menuButton'>Old Site</a>
-                    </div>
-                }
+            <div className='navBar'>
+                <div className='smallImgContainer'/>
+                <div className="menuDiv">
+                    <button className={selected ? "navBarButton-active" : 'navbarButton'} onClick={select} type="button"> Menu </button>
+                    {selected &&
+                    <div className="menuDropDown">
+                
+                    {location.pathname === '/' ?
+                    <>
+                        <ScrollLink to='Top' spy={true} smooth={true} offset={0} duration={600} className='menuButton'>Home</ScrollLink>
+                        <ScrollLink to='Events' spy={true} smooth={true} offset={0} duration={500} className='menuButton'>Events</ScrollLink>
+                        <ScrollLink to='Donations' spy={true} smooth={true} offset={-210} duration={500} className='menuButton'>Donate</ScrollLink>
+                    </>
+                    :
+                    <>
+                    <Link to="/" className='menuButton'>Home</Link>
+                    </>
+        
+                    }
+                    <Link to="/memberform" className='menuButton'>Membership</Link>
+                    <Link to="/studentform" className='menuButton'>Student</Link>
+                    {location.pathname === '/' &&
+                    <>
+                        <ScrollLink to='contactDiv' spy={true} smooth={true} offset={0} duration={800} className='menuButton'>Contact Us</ScrollLink>
+                    </>
+                    }
+                    <a href='https://www.hatfieldjamemasjid.org/' target="_blank" rel="noreferrer" className='menuButton'>Old Site</a>
+                        </div>
+                    }
+                </div>
             </div>
             }
             </div>

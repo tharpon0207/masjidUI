@@ -10,10 +10,13 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import { api_host, axiosConfig } from "../config/data";
 import NavBar from '../components/NavBar';
+import { useMediaQuery } from 'react-responsive';
+import Prayers from '../components/Prayers';
 
 export default function HomePage(){ 
     const [data, setData] = useState(null);
     const [Edata, setEData] = useState(null);
+    const isDesktop = useMediaQuery({maxWidth: 1500})
     
     useEffect(() => {
         // Fetch announcements data
@@ -44,7 +47,7 @@ export default function HomePage(){
     }, []);
 
     return(
-        <div className='homePageDiv'>
+        <div className='homePageDiv'>  
             <div id='Top'>
                 <Intro/>
             </div>
@@ -52,6 +55,13 @@ export default function HomePage(){
             <NavBar />
             
             <div className='bannerContainer'> 
+                
+                {isDesktop &&
+                    <div className='prayersPhoneDiv'>
+                        <Prayers />
+                    </div>
+                }
+                
                 <div>
                     { data && data.announcements.length > 0 &&
                         <div>
@@ -59,6 +69,7 @@ export default function HomePage(){
                         </div>
                     }
                 </div>
+
                 <div>
                     <AboutUs />
                 </div>
